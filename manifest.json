@@ -1,0 +1,24 @@
+{
+    "name": "tv2-ad-extension",
+    "version": "1.0.0",
+    "description": "Skips TV2 ad's",
+    "manifest_version": 3,
+    "author": "Thomas Taulo",
+    "host_permissions": ["<all_urls>"],
+    "permissions": [
+        "storage"
+      ],
+    "action":{
+        "default_title": "Skip TV2 Ad's"
+    },
+    "content_scripts": [
+        {
+          "js": [
+            "scripts/skipAds.js"
+          ],
+          "matches": [
+            "https://play.tv2.dk/*"
+          ]
+        }
+      ]
+}
